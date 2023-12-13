@@ -22,6 +22,22 @@ Os maus-cheiros de código são indicadores de problemas no projeto de software 
 
 A refatoração é o processo de alterar a estrutura do código sem alterar seu comportamento externo, com o objetivo de melhorar aspectos como legibilidade, simplicidade e manutenibilidade. Existem várias operações de refatoração que podem ser usadas para melhorar a simplicidade do código. Por exemplo, a refatoração “Extract Method” pode ser usada para tratar o mau-cheiro “Long Method”. Esta refatoração envolve criar um novo método a partir de um bloco de código em um método existente. Isso simplifica o método original e torna o código mais fácil de entender. Outra refatoração útil para melhorar a simplicidade é a “Extract Class”, que pode ser usada para dividir uma “Large Class” em classes menores e mais simples. A refatoração “Replace Data Clump with Object” pode ser usada para tratar o mau-cheiro “Data Clumps”, substituindo o grupo de variáveis por uma classe.
 
+### Exemplo de Código Longo
+<div align="center">
+
+![Código longo](./img/metodo_longo.png)
+
+</div>
+
+### Exemplo de Código Curto
+
+<div align="center">
+
+![Código curto](./img/metodo_longo.png)
+
+</div>
+
+
 ## Referências Bibliográficas
 
 FOWLER, Martin. Refactoring: improving the design of existing code. Boston: Addison-Wesley Longman Publishing Co., Inc., 1999.
