@@ -33,7 +33,7 @@ A técnica "Extract Method" é uma estratégia eficaz na refatoração de códig
 
 <div align="center">
 
-![Código modular](./img/sem_duplicado.png)
+![Código sem duplicidade](./img/sem_duplicado.png)
 
 </div>
 
