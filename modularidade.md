@@ -25,7 +25,7 @@ A técnica "Extract Method" é uma estratégia eficaz na refatoração de códig
 ### Exemplo de Código Duplicado
 <div align="center">
 
-![Código duplicado](./img/modular/modularidade.png)
+![Código duplicado](./img/duplicado.png)
 
 </div>
 
@@ -33,7 +33,7 @@ A técnica "Extract Method" é uma estratégia eficaz na refatoração de códig
 
 <div align="center">
 
-![Código modular](./img/modular/modularidade.png)
+![Código modular](./img/modular.png)
 
 </div>
 
