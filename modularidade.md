@@ -22,19 +22,88 @@ A modularidade no design de software desempenha um papel crucial na abordagem de
 A modularidade no design de software é essencial para criar sistemas mais compreensíveis e de fácil manutenção. No contexto da "Classe Inchada", a refatoração se torna uma ferramenta valiosa para promover a modularidade. A técnica de refatoração "Extract Class" é particularmente relevante nesse cenário. Ela permite abordar o problema de uma classe que se tornou grande e complexa, dividindo suas responsabilidades em classes menores e mais coesas. Ao identificar grupos lógicos de responsabilidades, essa técnica contribui diretamente para a criação de módulos independentes, facilitando a compreensão e a manutenção do código. A modularidade resultante não apenas melhora a organização interna do código, mas também reduz o acoplamento, uma vez que as classes mais enxutas são menos propensas a depender excessivamente umas das outras.
 
 ### Exemplo de Classe inchada
-<div align="center">
 
-![Classe inchada](./img/classe_inchada.png)
+```
+public class Cachorro {
+    private String nome;
+    private int idade;
+    private String cor;
+    private String raca;
+    private boolean estaComFome;
 
-</div>
+    public void exibirInformacoes() {
+        System.out.println("Nome: " + nome);
+        System.out.println("Idade: " + idade);
+        System.out.println("Cor: " + cor);
+        System.out.println("Raça: " + raca);
+        System.out.println("Está com fome? " + estaComFome);
+    }
+
+    public void latir() {
+        if (estaComFome) {
+            System.out.println(nome + " está latindo por comida!");
+        } else {
+            System.out.println(nome + " está latindo!");
+        }
+    }
+
+    public void alimentar() {
+        estaComFome = false;
+        System.out.println(nome + " foi alimentado!");
+    }
+
+    public void envelhecer() {
+        idade++;
+        System.out.println(nome + " envelheceu um ano!");
+    }
+}
+```
 
 ### Exemplo de Código modularizado
 
-<div align="center">
+```
+public class Cachorro {
+    private String nome;
+    private int idade;
+    private String cor;
+    private String raca;
+    private boolean estaComFome;
+    private Latido latido;
 
-![Código modularizado](./img/modularizada.png)
+    public void exibirInformacoes() {
+        System.out.println("Nome: " + nome);
+        System.out.println("Idade: " + idade);
+        System.out.println("Cor: " + cor);
+        System.out.println("Raça: " + raca);
+        System.out.println("Está com fome? " + estaComFome);
+    }
 
-</div>
+    public void latir() {
+        latido.latir(nome, estaComFome);
+    }
+
+    public void alimentar() {
+        estaComFome = false;
+        System.out.println(nome + " foi alimentado!");
+    }
+
+    public void envelhecer() {
+        idade++;
+        System.out.println(nome + " envelheceu um ano!");
+    }
+}
+
+public class Latido {
+    public void latir(String nomeCachorro, boolean comFome) {
+        if (comFome) {
+            System.out.println(nomeCachorro + " está latindo por comida!");
+        } else {
+            System.out.println(nomeCachorro + " está latindo!");
+        }
+    }
+}
+```
+
 
 
 ## Referências Bibliográficas
