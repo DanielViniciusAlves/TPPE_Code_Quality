@@ -27,27 +27,27 @@ A criação de boas interfaces é fundamental para o desenvolvimento de software
 
 ### Exemplo de Interface Bem Definida:
 
-´´´
+```
 public interface NotificationService {
     void enviarNotificacao(String mensagem, String destinatario);
     void configurarCanal(String canal);
     void configurarTempoExpiracao(int segundos);
 }
 
-´´´
+```
 
 Neste exemplo, a interface NotificationService é bem definida. Ela possui métodos claramente nomeados e coesos, relacionados ao propósito de enviar notificações. Os métodos são intuitivos, fornecendo funcionalidades específicas sem serem excessivamente genéricos.
 
 ### Exemplo Interface Mal Definida:
 
-´´´
+```
 public interface NotifService {
     void sendMsg(String msg, String recipient);
     void configure(String channel, int timeout);
     Object doSomething(Object input);
 }
 
-´´´
+```
 
 Aqui, a interface NotifService é mal definida. Os nomes de métodos são vagos e não transmitem claramente o propósito ou a funcionalidade. A presença do método doSomething sem uma descrição clara adiciona ambiguidade à interface. A falta de coesão dificulta a compreensão do propósito geral do serviço.
 
